@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FaceStreamer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="time-container">
+            <div class='date-container'>
+                <div class='date' id='date'></div>
+                <div class='weekday' id='weekday'></div>
+            </div>
+            <div class='clock-container'>
+                <div class='clock' id='clock'></div>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="content">
+            <!-- Streaming data here -->
+            <img src={{ url_for('video_feed') }} alt='webcam' />
+        </div>
+    </div>
+    <div class="footer">
+        <p>Streamer App</p>
+    </div>
+    <script src="../static/app.js" async defer></script>
+    <script src="../static/jquery.min.js"></script>
+</body>
+
+</html>
